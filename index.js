@@ -13,10 +13,11 @@ app.post('/webhook/clickfunnels-to-slack', async (req, res) => {
   try {
     // Extract data from ClickFunnels
     console.log("RAW BODY:", req.body);
-    const first_name = req.body.first_name || '';
-    const last_name = req.body.last_name || '';
-    const email = req.body.email_address || 'N/A';
-    const phone = req.body.phone_number || 'N/A';
+    const attributes = req.body?.data?.attributes || {};
+    const first_name = attributes.first_name || '';
+    const last_name = attributes.last_name || '';
+    const email = attributes.email_address || 'N/A';
+    const phone = attributes.phone_number || 'N/A';
 
     // Format message
     const message = {
