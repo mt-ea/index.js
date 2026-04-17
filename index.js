@@ -21,7 +21,7 @@ app.post('/webhook/clickfunnels-to-slack', async (req, res) => {
 
     // Format message
     const message = {
-      text: `New Lead\nName: ${first_name} ${last_name}\nEmail: ${email}\nPhone: ${phone}`
+      text: `New Lead\nName: ${first_name}\nEmail: ${email}\nPhone: ${phone}`
     };
 
     // Send to Slack
