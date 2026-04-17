@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 
-const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+const SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 
 // Webhook endpoint
 app.post('/webhook/clickfunnels-to-slack', async (req, res) => {
